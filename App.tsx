@@ -1,8 +1,8 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {SafeAreaView, ScrollView, StatusBar, useColorScheme, View} from 'react-native'
 import Test from '@/components/Test'
-
 import {Colors} from 'react-native/Libraries/NewAppScreen'
+// import storage from '@/utils/storage'
 
 const App = (): JSX.Element => {
   const isDarkMode = useColorScheme() === 'dark'
@@ -10,6 +10,18 @@ const App = (): JSX.Element => {
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   }
+
+  // const setData = async () => {
+  //   await storage.setData('test', {data: 'This is test Data!'})
+  // }
+
+  // const getData = async () => {
+  //   const data = await storage.getData('test')
+  //   if (typeof data === 'boolean') return
+  //   console.log(data.data)
+  // }
+
+  useEffect(() => {}, [])
 
   return (
     <SafeAreaView style={backgroundStyle}>
