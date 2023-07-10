@@ -1,5 +1,7 @@
 # 🦄 Browse Bounty(Dev)
 
+<br >
+
 ## 🛠️ 기술스택
 
 ```
@@ -12,6 +14,8 @@
 - Firebase v
 ```
 
+<br >
+
 ## ⚖️ 코딩 컨밴션
 
 - ES6(ECMAScript) 코드 작성
@@ -21,6 +25,8 @@
   - async/await
   - import/export(Alias 경로 사용)
 - ESLint, Prettier 사용
+
+<br >
 
 ## 🌲 폴더구조
 
@@ -46,6 +52,8 @@
 ├──📄 tsconfig.json
 ...
 ```
+
+<br >
 
 ## 📌 Git
 

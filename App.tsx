@@ -3,6 +3,8 @@ import {SafeAreaView, ScrollView, StatusBar, useColorScheme, View} from 'react-n
 import Test from '@/components/Test'
 import {Colors} from 'react-native/Libraries/NewAppScreen'
 // import storage from '@/utils/storage'
+import SplashScreen from 'react-native-splash-screen'
+import {API_URL} from '@env'
 
 const App = (): JSX.Element => {
   const isDarkMode = useColorScheme() === 'dark'
@@ -21,7 +23,12 @@ const App = (): JSX.Element => {
   //   console.log(data.data)
   // }
 
-  useEffect(() => {}, [])
+  useEffect(() => {
+    setTimeout(() => {
+      SplashScreen.hide()
+    }, 1000)
+    console.log(API_URL)
+  }, [])
 
   return (
     <SafeAreaView style={backgroundStyle}>
