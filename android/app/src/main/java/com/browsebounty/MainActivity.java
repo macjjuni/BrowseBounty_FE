@@ -6,6 +6,7 @@ import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint;
 import com.facebook.react.defaults.DefaultReactActivityDelegate;
 import android.os.Bundle; // splash screen 2023.07.09
 import org.devio.rn.splashscreen.SplashScreen; // splash screen 2023.07.09
+import android.os.Bundle; // react-native-screens 2023.07.11
 
 public class MainActivity extends ReactActivity {
 
