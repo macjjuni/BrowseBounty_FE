@@ -10,17 +10,17 @@ const style = StyleSheet.create({
   },
 })
 
-const HomeScreen = ({navigation}: ScreenTypes) => {
+const MyPageScreen = ({navigation}: ScreenTypes) => {
   const onClick = useCallback(() => {
-    navigation.navigate('Login')
+    navigation.navigate('Home')
   }, [navigation])
   return (
     <View style={style.view}>
       <TouchableOpacity onPress={onClick}>
-        <Text>Home Screen</Text>
+        <Text>My Page</Text>
       </TouchableOpacity>
     </View>
   )
 }
 
-export default HomeScreen
+export default MyPageScreen

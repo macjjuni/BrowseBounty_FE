@@ -1,22 +1,14 @@
 import React, {useEffect} from 'react'
 // import {SafeAreaView, ScrollView, StatusBar, useColorScheme, View} from 'react-native'
-import HomeScreen from '@/screens/Home'
-import LoginScreen from '@/screens/Login'
 // import {Colors} from 'react-native/Libraries/NewAppScreen'
 // import storage from '@/utils/storage'
 import {NavigationContainer} from '@react-navigation/native'
 import {createNativeStackNavigator} from '@react-navigation/native-stack'
+import navigates from '@/navigate'
 import SplashScreen from 'react-native-splash-screen'
 import {API_URL} from '@env'
 
 const Stack = createNativeStackNavigator()
-
-// const styles = StyleSheet.create({
-//   view: {
-//     borderColor: 'red',
-//     borderWidth: 10,
-//   },
-// })
 
 const App = (): JSX.Element => {
   // const isDarkMode = useColorScheme() === 'dark'
@@ -45,8 +37,9 @@ const App = (): JSX.Element => {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" options={{title: 'Home', headerShown: false}} component={HomeScreen} />
-        <Stack.Screen name="Login" options={{title: 'Logig', headerShown: false}} component={LoginScreen} />
+        {navigates.map(({name, options, component}) => (
+          <Stack.Screen key={name} name={name} options={options} component={component} />
+        ))}
       </Stack.Navigator>
     </NavigationContainer>
   )
